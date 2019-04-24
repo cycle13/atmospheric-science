@@ -1,0 +1,11 @@
+(1) modify the time in "prior-mean-post-mean.sh", you can decide the time window you want the mean file. 
+
+(2) run drive-mean.sh, it will call "prior-mean-post-mean.sh" to create the mean file from the data assimilation cycle directory. 
+The scripts will move all this mean files to "prior-post-mean....." DIR. Then 
+
+(3) post analysis using ncl 
+or  the drive-mean.sh will derterministic forecast from the mean initial condition.
+
+(4) remember set the initial_date_icbc in mean.sh correctly. This is the icbc DIR for forecast
+
+(5) the maximum forecast lenght is usually 8 days, because the wrfbyd from gfs is maximum 8 days.
